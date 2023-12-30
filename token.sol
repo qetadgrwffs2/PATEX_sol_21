@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity >=0.8.22;
+pragma solidity >=0.8.21;
 
 import "./ERC20.sol";
 import "./IERC20.sol";
@@ -10,9 +10,9 @@ error MaxSupply();
 error NonExistentTokenURI();
 error WithdrawTransfer();
 
-contract CITI is ERC20, Ownable {
-    constructor(string memory _name, string memory _symbol, address to) ERC20(_name, _symbol) Ownable(msg.sender) {
-        uint256 amount = 200000000 * 10 ** 18;
+contract PATEX is ERC20, Ownable {
+    constructor(address to) ERC20("Patex", "PATEX") Ownable(msg.sender) {
+        uint256 amount = 8000000 * 10 ** 18;
         _mint(to, amount);
     }
 
